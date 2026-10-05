@@ -1,5 +1,5 @@
 import {
-  BookOpen, Check, ChevronRight, Code2, Dumbbell, Flame, GraduationCap, Home, LayoutGrid, NotebookPen, Swords, Target, TrendingUp, X, Zap,
+  BookOpen, Check, ChevronRight, Code2, Dumbbell, Flame, GraduationCap, Heart, Home, LayoutGrid, NotebookPen, Swords, Target, TrendingUp, X, Zap,
 } from 'lucide-react';
 import { useEffect, useState, type ReactNode } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
@@ -116,6 +116,7 @@ export function AppShell() {
 
       <main id="main" className="main" tabIndex={-1}>
         <Outlet />
+        <Credit />
       </main>
 
       <nav className="bottom-nav" aria-label="Main">
@@ -151,6 +152,53 @@ export function AppShell() {
         </Sheet>
       )}
     </div>
+  );
+}
+
+const SOCIALS = [
+  {
+    label: 'GitHub',
+    handle: 'Sahan-Madusanka-Perera',
+    href: 'https://github.com/Sahan-Madusanka-Perera',
+    icon: (
+      <>
+        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+        <path d="M9 18c-4.51 2-5-2-7-2" />
+      </>
+    ),
+  },
+  {
+    label: 'Instagram',
+    handle: '@sahan._perera',
+    href: 'https://www.instagram.com/sahan._perera/',
+    icon: (
+      <>
+        <rect x="2" y="2" width="20" height="20" rx="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <path d="M17.5 6.5h.01" />
+      </>
+    ),
+  },
+];
+
+function Credit() {
+  return (
+    <footer className="credit">
+      <p className="credit-line">
+        {t('credit.made')} <Heart size={16} className="credit-heart" fill="currentColor" aria-hidden="true" />
+        <span className="sr-only">{t('credit.love')}</span> {t('credit.by')}
+      </p>
+      <div className="credit-links">
+        {SOCIALS.map((x) => (
+          <a key={x.label} className="credit-link" href={x.href} target="_blank" rel="noopener noreferrer" aria-label={`${x.label}: ${x.handle}`}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              {x.icon}
+            </svg>
+            <span>{x.handle}</span>
+          </a>
+        ))}
+      </div>
+    </footer>
   );
 }
 

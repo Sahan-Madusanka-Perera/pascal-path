@@ -1,6 +1,9 @@
 export const en = {
   'app.name': 'PascalPath',
   'app.tagline': 'GCE O/L Pascal, made fun',
+  'credit.made': 'Made with',
+  'credit.love': 'love',
+  'credit.by': 'by Sahan Perera',
 
   'nav.home': 'Home',
   'nav.learn': 'Learn',

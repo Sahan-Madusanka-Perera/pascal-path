@@ -226,6 +226,81 @@
   font-size: 1.05rem;
 }
 
+/* ---------- Credit ---------- */
+.credit {
+  max-width: var(--content-max);
+  margin: 72px auto 0;
+  padding-top: 24px;
+  border-top: var(--tile-border) dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  flex-wrap: wrap;
+}
+.credit-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-2);
+  font-weight: 650;
+}
+.credit-heart {
+  color: var(--hue-red);
+  animation: heartbeat 1.6s var(--ease) infinite;
+}
+@keyframes heartbeat {
+  0%,
+  40%,
+  100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.22);
+  }
+  28% {
+    transform: scale(1.08);
+  }
+}
+.credit-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.credit-link {
+  --c: var(--text-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: var(--tile-border) solid var(--border);
+  border-bottom-width: calc(var(--tile-border) + 2px);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  transition: border-color 0.15s, transform 0.12s var(--ease);
+}
+.credit-link svg {
+  color: var(--c);
+}
+.credit-link[href*='instagram'] {
+  --c: var(--hue-pink);
+}
+.credit-link[href*='github'] {
+  --c: var(--hue-violet);
+}
+.credit-link:hover {
+  border-color: var(--c);
+  transform: translateY(-2px);
+}
+.credit-link:active {
+  transform: translateY(1px);
+}
+
 /* ---------- Bottom nav (mobile) ---------- */
 .bottom-nav {
   display: none;
