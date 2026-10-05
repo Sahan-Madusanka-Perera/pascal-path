@@ -1,0 +1,39 @@
+Enter PIN: PIN correct. Welcome!
+
+=== ATM Menu ===
+1. Check Balance
+2. Withdraw
+3. Deposit
+4. Exit
+Choice: Balance: Rs. 10000.00
+
+=== ATM Menu ===
+1. Check Balance
+2. Withdraw
+3. Deposit
+4. Exit
+Choice: Amount to withdraw: Withdrawn: Rs. 2500.00
+New balance: Rs. 7500.00
+
+=== ATM Menu ===
+1. Check Balance
+2. Withdraw
+3. Deposit
+4. Exit
+Choice: Amount to deposit: Deposited: Rs. 100.50
+New balance: Rs. 7600.50
+
+=== ATM Menu ===
+1. Check Balance
+2. Withdraw
+3. Deposit
+4. Exit
+Choice: Invalid choice!
+
+=== ATM Menu ===
+1. Check Balance
+2. Withdraw
+3. Deposit
+4. Exit
+Choice: Thank you! Goodbye.
+

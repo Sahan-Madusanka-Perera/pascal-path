@@ -1,0 +1,9 @@
+How many students? Enter marks for student 1: Student 1 FAILED
+Enter marks for student 2: Student 2 PASSED
+Enter marks for student 3: Student 3 PASSED
+
+=== STATISTICS ===
+Total students: 3
+Passed: 2
+Failed: 1
+Average marks: 61.67
