@@ -1,5 +1,6 @@
 import { Fragment, lazy, Suspense, useEffect, type ReactNode } from 'react';
 import { HashRouter, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AppShell } from './components/layout/AppShell';
 import { Celebrations } from './components/layout/Celebrations';
 import { getState, update, useAppState } from './engine/store';
@@ -98,6 +99,7 @@ export function App() {
         </Route>
       </Routes>
       <Celebrations />
+      <Analytics />
     </HashRouter>
   );
 }
